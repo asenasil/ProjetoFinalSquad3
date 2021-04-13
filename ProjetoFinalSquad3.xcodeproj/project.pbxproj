@@ -19,6 +19,7 @@
 		AA6AA5CB2625DF1000697A7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6AA5C92625DF1000697A7D /* LaunchScreen.storyboard */; };
 		AA6AA5D62625DF1000697A7D /* ProjetoFinalSquad3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AA5D52625DF1000697A7D /* ProjetoFinalSquad3Tests.swift */; };
 		AA6AA5E12625DF1000697A7D /* ProjetoFinalSquad3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AA5E02625DF1000697A7D /* ProjetoFinalSquad3UITests.swift */; };
+		AA6AA6142625EDE800697A7D /* ListaCriptomoedasView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA6AA6132625EDE800697A7D /* ListaCriptomoedasView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		AA6AA5DC2625DF1000697A7D /* ProjetoFinalSquad3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjetoFinalSquad3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA6AA5E02625DF1000697A7D /* ProjetoFinalSquad3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetoFinalSquad3UITests.swift; sourceTree = "<group>"; };
 		AA6AA5E22625DF1000697A7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA6AA6132625EDE800697A7D /* ListaCriptomoedasView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaCriptomoedasView.xib; sourceTree = "<group>"; };
 		C7A4CF20981298D7E358B697 /* Pods_ProjetoFinalSquad3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjetoFinalSquad3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F024407DD2921609201AD693 /* Pods-ProjetoFinalSquad3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoFinalSquad3Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetoFinalSquad3Tests/Pods-ProjetoFinalSquad3Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -192,6 +194,7 @@
 		AA6AA60E2625E90400697A7D /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AA6AA6132625EDE800697A7D /* ListaCriptomoedasView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA6AA6142625EDE800697A7D /* ListaCriptomoedasView.xib in Resources */,
 				AA6AA5CB2625DF1000697A7D /* LaunchScreen.storyboard in Resources */,
 				AA6AA5C82625DF1000697A7D /* Assets.xcassets in Resources */,
 				AA6AA5C32625DF0E00697A7D /* Main.storyboard in Resources */,
