@@ -9,6 +9,19 @@ import UIKit
 
 class CustumTableViewCell: UITableViewCell {
 
+    // MARK: - Seleção de Outlets
+    @IBOutlet weak var imagemCriptomoeda: UIImageView!
+    
+    @IBOutlet weak var imagemDeFavoritos: UIImageView!
+    
+    @IBOutlet weak var bitcoinLabel: UILabel!
+    
+    @IBOutlet weak var siglaLabel: UILabel!
+    
+    @IBOutlet weak var cotacaoLabel: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -17,7 +30,6 @@ class CustumTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
     
 }

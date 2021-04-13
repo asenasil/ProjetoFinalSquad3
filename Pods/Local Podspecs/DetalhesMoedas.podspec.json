@@ -1,0 +1,22 @@
+{
+  "name": "DetalhesMoedas",
+  "version": "0.1.0",
+  "summary": "A short description of DetalhesMoedas.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/cristianeguliana@gmail.com/DetalhesMoedas",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "cristianeguliana@gmail.com": "cristianeguliana@gmail.com"
+  },
+  "source": {
+    "git": "https://github.com/cristianeguliana@gmail.com/DetalhesMoedas.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "DetalhesMoedas/Classes/**/*"
+}
