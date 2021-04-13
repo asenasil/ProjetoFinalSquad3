@@ -8,7 +8,13 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListaCriptomoedasViewController" customModule="ProjetoFinalSquad3" customModuleProvider="target">
+            <connections>
+                <outlet property="dataOperacao" destination="UlV-HC-smz" id="VJL-77-Bq0"/>
+                <outlet property="tabelaMoedas" destination="OL1-9W-qZI" id="eaI-dL-q5l"/>
+                <outlet property="tituloMoeda" destination="PUZ-Rp-ZLj" id="427-aM-SmY"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>

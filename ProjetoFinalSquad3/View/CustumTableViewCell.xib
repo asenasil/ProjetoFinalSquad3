@@ -52,6 +52,7 @@
                 <outlet property="bitcoinLabel" destination="67a-fV-Oev" id="3eN-rJ-pPE"/>
                 <outlet property="cotacaoLabel" destination="TVy-y4-qBN" id="dWz-Zq-JuE"/>
                 <outlet property="imagemCell" destination="I3L-fA-HYh" id="uRS-TW-0aP"/>
+                <outlet property="imagemCriptomoeda" destination="I3L-fA-HYh" id="3qj-HE-qlY"/>
                 <outlet property="imagemDeFavoritos" destination="U2I-jt-9sa" id="lw1-nU-lUq"/>
                 <outlet property="siglaLabel" destination="BBR-2t-TPS" id="wlw-D2-VLg"/>
             </connections>

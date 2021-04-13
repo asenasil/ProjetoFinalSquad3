@@ -18,10 +18,10 @@
 		AA6AA5CB2625DF1000697A7D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA6AA5C92625DF1000697A7D /* LaunchScreen.storyboard */; };
 		AA6AA5D62625DF1000697A7D /* ProjetoFinalSquad3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AA5D52625DF1000697A7D /* ProjetoFinalSquad3Tests.swift */; };
 		AA6AA5E12625DF1000697A7D /* ProjetoFinalSquad3UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AA5E02625DF1000697A7D /* ProjetoFinalSquad3UITests.swift */; };
-		AA6AA6142625EDE800697A7D /* ListaCriptomoedasView.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA6AA6132625EDE800697A7D /* ListaCriptomoedasView.xib */; };
+		AA6AA6142625EDE800697A7D /* ListaCriptomoedasViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA6AA6132625EDE800697A7D /* ListaCriptomoedasViewController.xib */; };
 		AA7FC2EA26261459003B7539 /* CustumTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7FC2E826261459003B7539 /* CustumTableViewCell.swift */; };
 		AA7FC2EB26261459003B7539 /* CustumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7FC2E926261459003B7539 /* CustumTableViewCell.xib */; };
-		AA7FC2F026261630003B7539 /* ListaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7FC2EF26261630003B7539 /* ListaController.swift */; };
+		AA7FC2F026261630003B7539 /* ListaCriptomoedasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7FC2EF26261630003B7539 /* ListaCriptomoedasViewController.swift */; };
 		AC82C500F298288B02F74656 /* Pods_ProjetoFinalSquad3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E637D30DC1FEE9139BA43E63 /* Pods_ProjetoFinalSquad3Tests.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,10 +63,10 @@
 		AA6AA5DC2625DF1000697A7D /* ProjetoFinalSquad3UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProjetoFinalSquad3UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA6AA5E02625DF1000697A7D /* ProjetoFinalSquad3UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjetoFinalSquad3UITests.swift; sourceTree = "<group>"; };
 		AA6AA5E22625DF1000697A7D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AA6AA6132625EDE800697A7D /* ListaCriptomoedasView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaCriptomoedasView.xib; sourceTree = "<group>"; };
+		AA6AA6132625EDE800697A7D /* ListaCriptomoedasViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListaCriptomoedasViewController.xib; sourceTree = "<group>"; };
 		AA7FC2E826261459003B7539 /* CustumTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustumTableViewCell.swift; sourceTree = "<group>"; };
 		AA7FC2E926261459003B7539 /* CustumTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustumTableViewCell.xib; sourceTree = "<group>"; };
-		AA7FC2EF26261630003B7539 /* ListaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaController.swift; sourceTree = "<group>"; };
+		AA7FC2EF26261630003B7539 /* ListaCriptomoedasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaCriptomoedasViewController.swift; sourceTree = "<group>"; };
 		ADA1A1D13CD423139CCDBB65 /* Pods-ProjetoFinalSquad3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoFinalSquad3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetoFinalSquad3/Pods-ProjetoFinalSquad3.debug.xcconfig"; sourceTree = "<group>"; };
 		BDF53E07B53ABD93F6A5E809 /* Pods-ProjetoFinalSquad3Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoFinalSquad3Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetoFinalSquad3Tests/Pods-ProjetoFinalSquad3Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		C3C37D6415D5F9583451AB86 /* Pods-ProjetoFinalSquad3UITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoFinalSquad3UITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetoFinalSquad3UITests/Pods-ProjetoFinalSquad3UITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -138,14 +138,10 @@
 			children = (
 				AA6AA60F2625E96600697A7D /* ModelView */,
 				AA6AA60D2625E8FD00697A7D /* Controller */,
-				AA6AA60C2625E8F500697A7D /* Model */,
 				AA6AA60E2625E90400697A7D /* View */,
-				AA6AA5BB2625DF0E00697A7D /* AppDelegate.swift */,
-				AA6AA5BD2625DF0E00697A7D /* SceneDelegate.swift */,
+				AA6AA60C2625E8F500697A7D /* Model */,
 				AA6AA5BF2625DF0E00697A7D /* ViewController.swift */,
-				AA6AA5C12625DF0E00697A7D /* Main.storyboard */,
 				AA6AA5C72625DF1000697A7D /* Assets.xcassets */,
-				AA6AA5C92625DF1000697A7D /* LaunchScreen.storyboard */,
 				AA6AA5CC2625DF1000697A7D /* Info.plist */,
 				AA6AA5C42625DF0E00697A7D /* ProjetoFinalSquad3.xcdatamodeld */,
 			);
@@ -187,8 +183,8 @@
 		AA6AA60E2625E90400697A7D /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AA7FC2EF26261630003B7539 /* ListaController.swift */,
-				AA6AA6132625EDE800697A7D /* ListaCriptomoedasView.xib */,
+				AA7FC2EF26261630003B7539 /* ListaCriptomoedasViewController.swift */,
+				AA6AA6132625EDE800697A7D /* ListaCriptomoedasViewController.xib */,
 				AA7FC2E926261459003B7539 /* CustumTableViewCell.xib */,
 				AA7FC2E826261459003B7539 /* CustumTableViewCell.swift */,
 			);
@@ -198,6 +194,10 @@
 		AA6AA60F2625E96600697A7D /* ModelView */ = {
 			isa = PBXGroup;
 			children = (
+				AA6AA5BD2625DF0E00697A7D /* SceneDelegate.swift */,
+				AA6AA5BB2625DF0E00697A7D /* AppDelegate.swift */,
+				AA6AA5C12625DF0E00697A7D /* Main.storyboard */,
+				AA6AA5C92625DF1000697A7D /* LaunchScreen.storyboard */,
 			);
 			path = ModelView;
 			sourceTree = "<group>";
@@ -323,7 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AA6AA6142625EDE800697A7D /* ListaCriptomoedasView.xib in Resources */,
+				AA6AA6142625EDE800697A7D /* ListaCriptomoedasViewController.xib in Resources */,
 				AA6AA5CB2625DF1000697A7D /* LaunchScreen.storyboard in Resources */,
 				AA6AA5C82625DF1000697A7D /* Assets.xcassets in Resources */,
 				AA6AA5C32625DF0E00697A7D /* Main.storyboard in Resources */,
@@ -447,7 +447,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA6AA5C02625DF0E00697A7D /* ViewController.swift in Sources */,
-				AA7FC2F026261630003B7539 /* ListaController.swift in Sources */,
+				AA7FC2F026261630003B7539 /* ListaCriptomoedasViewController.swift in Sources */,
 				AA6AA5C62625DF0E00697A7D /* ProjetoFinalSquad3.xcdatamodeld in Sources */,
 				AA7FC2EA26261459003B7539 /* CustumTableViewCell.swift in Sources */,
 				AA6AA5BC2625DF0E00697A7D /* AppDelegate.swift in Sources */,
