@@ -7,6 +7,9 @@ target 'ProjetoFinalSquad3' do
   
   pod 'SwiftLint'
   
+  pod 'Alamofire' #'~> 4.7.0'
+  pod 'AlamofireImage' #'~> 3.4.0'
+  
   # Pods for ProjetoFinalSquad3
 
   target 'ProjetoFinalSquad3Tests' do
