@@ -1,0 +1,6 @@
+framework module Pods_ProjetoFinalSquad3 {
+  umbrella header "Pods-ProjetoFinalSquad3-umbrella.h"
+
+  export *
+  module * { export * }
+}
