@@ -141,6 +141,10 @@
 		AA6AA5BA2625DF0E00697A7D /* ProjetoFinalSquad3 */ = {
 			isa = PBXGroup;
 			children = (
+				AA6AA60F2625E96600697A7D /* ModelView */,
+				AA6AA60D2625E8FD00697A7D /* Controller */,
+				AA6AA60C2625E8F500697A7D /* Model */,
+				AA6AA60E2625E90400697A7D /* View */,
 				AA6AA5BB2625DF0E00697A7D /* AppDelegate.swift */,
 				AA6AA5BD2625DF0E00697A7D /* SceneDelegate.swift */,
 				AA6AA5BF2625DF0E00697A7D /* ViewController.swift */,
@@ -169,6 +173,34 @@
 				AA6AA5E22625DF1000697A7D /* Info.plist */,
 			);
 			path = ProjetoFinalSquad3UITests;
+			sourceTree = "<group>";
+		};
+		AA6AA60C2625E8F500697A7D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AA6AA60D2625E8FD00697A7D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		AA6AA60E2625E90400697A7D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AA6AA60F2625E96600697A7D /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -322,16 +354,16 @@
 		};
 		AA6AA5FD2625E3CB00697A7D /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\nif which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n\n${PODS_ROOT}/SwiftLint/swiftlint\n\nelse\n\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\n\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which \"${PODS_ROOT}/SwiftLint/swiftlint\" >/dev/null; then\n${PODS_ROOT}/SwiftLint/swiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
 		};
 		B0F2D3F74EDA66DCCFC0A367 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
