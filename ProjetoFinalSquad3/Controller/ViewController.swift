@@ -9,11 +9,17 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var criptomoedas = ListaCriptomoedasViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        criptomoedas.makeRequest()
         // Do any additional setup after loading the view.
+        
+        
     }
 
-
+    
+    
 }
 
