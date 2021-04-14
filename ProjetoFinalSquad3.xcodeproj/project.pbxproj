@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5E80964D00BAEF48D453494E /* Pods_ProjetoFinalSquad3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E2494EBC8003F693D3A88D3 /* Pods_ProjetoFinalSquad3.framework */; };
 		6180E88BA747F4DD9461D0AB /* Pods_ProjetoFinalSquad3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1DBD8040C07EA072539884 /* Pods_ProjetoFinalSquad3UITests.framework */; };
+		AA08198E262719CC00B444B4 /* DetalhesMoedasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA08198D262719CC00B444B4 /* DetalhesMoedasViewModel.swift */; };
 		AA6AA5BC2625DF0E00697A7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AA5BB2625DF0E00697A7D /* AppDelegate.swift */; };
 		AA6AA5BE2625DF0E00697A7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AA5BD2625DF0E00697A7D /* SceneDelegate.swift */; };
 		AA6AA5C02625DF0E00697A7D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AA5BF2625DF0E00697A7D /* ViewController.swift */; };
@@ -48,6 +49,7 @@
 		5124F2D2CB00A6A1E76406ED /* Pods-ProjetoFinalSquad3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoFinalSquad3UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetoFinalSquad3UITests/Pods-ProjetoFinalSquad3UITests.release.xcconfig"; sourceTree = "<group>"; };
 		5F673891499D5758C8A7205C /* Pods-ProjetoFinalSquad3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoFinalSquad3Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetoFinalSquad3Tests/Pods-ProjetoFinalSquad3Tests.release.xcconfig"; sourceTree = "<group>"; };
 		A7B24876883F63EDDC658E85 /* Pods-ProjetoFinalSquad3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoFinalSquad3.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetoFinalSquad3/Pods-ProjetoFinalSquad3.release.xcconfig"; sourceTree = "<group>"; };
+		AA08198D262719CC00B444B4 /* DetalhesMoedasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesMoedasViewModel.swift; sourceTree = "<group>"; };
 		AA6AA5B82625DF0E00697A7D /* ProjetoFinalSquad3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoFinalSquad3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA6AA5BB2625DF0E00697A7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AA6AA5BD2625DF0E00697A7D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,10 +138,10 @@
 		AA6AA5BA2625DF0E00697A7D /* ProjetoFinalSquad3 */ = {
 			isa = PBXGroup;
 			children = (
-				AA6AA60F2625E96600697A7D /* ModelView */,
 				AA6AA60D2625E8FD00697A7D /* Controller */,
-				AA6AA60E2625E90400697A7D /* View */,
 				AA6AA60C2625E8F500697A7D /* Model */,
+				AA6AA60E2625E90400697A7D /* View */,
+				AA6AA60F2625E96600697A7D /* ViewModel */,
 				AA6AA5BF2625DF0E00697A7D /* ViewController.swift */,
 				AA6AA5C72625DF1000697A7D /* Assets.xcassets */,
 				AA6AA5CC2625DF1000697A7D /* Info.plist */,
@@ -191,15 +193,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		AA6AA60F2625E96600697A7D /* ModelView */ = {
+		AA6AA60F2625E96600697A7D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				AA08198D262719CC00B444B4 /* DetalhesMoedasViewModel.swift */,
 				AA6AA5BD2625DF0E00697A7D /* SceneDelegate.swift */,
 				AA6AA5BB2625DF0E00697A7D /* AppDelegate.swift */,
 				AA6AA5C12625DF0E00697A7D /* Main.storyboard */,
 				AA6AA5C92625DF1000697A7D /* LaunchScreen.storyboard */,
 			);
-			path = ModelView;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		BE914BB8348E5119B4CED72E /* Pods */ = {
@@ -446,6 +449,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA08198E262719CC00B444B4 /* DetalhesMoedasViewModel.swift in Sources */,
 				AA6AA5C02625DF0E00697A7D /* ViewController.swift in Sources */,
 				AA7FC2F026261630003B7539 /* ListaCriptomoedasViewController.swift in Sources */,
 				AA6AA5C62625DF0E00697A7D /* ProjetoFinalSquad3.xcdatamodeld in Sources */,

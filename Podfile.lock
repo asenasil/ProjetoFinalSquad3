@@ -27,10 +27,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   DetalhesMoedas:
-    :commit: 5f45e7b2181976f24cd78287e2ce60a4f3903d68
+    :commit: cc96f971267d586d38027986a2333a0887c82014
     :git: https://github.com/CristianeUliana/DetalhesMoedas.git
   ModCommons:
-    :commit: aa89781efcf929aa81fe9b267af91af37e5f1d2b
+    :commit: d5b8da6c84a2a4f6191b775718cee65238192c25
     :git: https://github.com/leojportes/CriptoBeca.git
 
 SPEC CHECKSUMS:
