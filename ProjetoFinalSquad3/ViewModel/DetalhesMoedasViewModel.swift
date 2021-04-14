@@ -9,6 +9,7 @@ import Foundation
 
 struct DetalhesMoedasViewModel{
     
+    let id:String
     let nomeText:String
     let siglaText:String
     let cotacaoText: Double

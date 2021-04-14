@@ -142,7 +142,6 @@
 				AA6AA60C2625E8F500697A7D /* Model */,
 				AA6AA60E2625E90400697A7D /* View */,
 				AA6AA60F2625E96600697A7D /* ViewModel */,
-				AA6AA5BF2625DF0E00697A7D /* ViewController.swift */,
 				AA6AA5C72625DF1000697A7D /* Assets.xcassets */,
 				AA6AA5CC2625DF1000697A7D /* Info.plist */,
 				AA6AA5C42625DF0E00697A7D /* ProjetoFinalSquad3.xcdatamodeld */,
@@ -178,6 +177,8 @@
 		AA6AA60D2625E8FD00697A7D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AA6AA5BF2625DF0E00697A7D /* ViewController.swift */,
+				AA6AA5C12625DF0E00697A7D /* Main.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -199,7 +200,6 @@
 				AA08198D262719CC00B444B4 /* DetalhesMoedasViewModel.swift */,
 				AA6AA5BD2625DF0E00697A7D /* SceneDelegate.swift */,
 				AA6AA5BB2625DF0E00697A7D /* AppDelegate.swift */,
-				AA6AA5C12625DF0E00697A7D /* Main.storyboard */,
 				AA6AA5C92625DF1000697A7D /* LaunchScreen.storyboard */,
 			);
 			path = ViewModel;
