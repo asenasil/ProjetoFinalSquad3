@@ -24,7 +24,7 @@ class ViewController: UIViewController {
 
     func setupUI(){
         let listaCriptomoedas = ListaCriptomoedasViewController()
-        stack.addArrangedSubview(listaCriptomoedas)
+        
     }
     
 }

@@ -36,11 +36,8 @@ class ListaCriptomoedasViewController: UIViewController {
     
     // MARK: - Selecao de Outlets
     
-    @IBOutlet weak var tituloMoeda: UILabel!
+
     
-    @IBOutlet weak var dataOperacao: UILabel!
-    
-    @IBOutlet weak var tabelaMoedas: UITableView!
     
     
     // MARK: - Selecao de Atributos da Classe
