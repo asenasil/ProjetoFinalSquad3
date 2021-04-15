@@ -8,6 +8,8 @@
 import UIKit
 import Commons
 import CoreData
+import AlamofireImage
+
 
 struct CriptoMoeda: Codable {
     
@@ -54,6 +56,8 @@ class MoedasViewController: UIViewController, UITableViewDelegate, UITableViewDa
     var listaDeMoedas:[Moeda] = []
 
     var favoritos: Favoritos?
+    
+    var moedas: CriptoMoedas = []
 
     var contexto: NSManagedObjectContext {
 
@@ -70,20 +74,19 @@ class MoedasViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         self.listaMoedas.delegate = self
         self.listaMoedas.dataSource = self
-        
-        makeRequest()
+       
         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return self.moedas.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell:CustumTableViewCell? = tableView.dequeueReusableCell(withIdentifier: "CustumTableViewCell", for: indexPath) as? CustumTableViewCell
         
-        cell?.bitcoinLabel.text
+        cell?.bitcoinLabel.text 
         cell?.imagemCriptomoeda.image = UIImage(named: "")
         cell?.imagemDeFavoritos.image = UIImage(named: "")
         cell?.siglaLabel.text
@@ -92,48 +95,28 @@ class MoedasViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell ?? UITableViewCell()
     }
     
-    
-    
-
-    public func makeRequest() {
-
-            let url = URL( string: "https://6076e5cf1ed0ae0017d6a02f.mockapi.io/api/v1/users")!
-
+    public func makeRequestLista(sigla: String) {
+            let newUrl = ApiRest.MoedaDetalhe
+            let url = URL(string: newUrl)!
             let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-
                 print(response as Any)
-
                 guard let responseData = data else { return }
-
                 do {
-
-                    let moedas = try JSONDecoder().decode(CriptoMoedas.self, from: responseData)
-
+                    let moedas = try JSONDecoder().decode(Moeda.self, from: responseData)
                     for moeda in moedas {
-
-                        let nomeMoeda = moeda.name
-                        let siglaID = moeda.assetID
-                        let imagemMoeda = moeda.idIcon
-                        let cotacaoMoeda = moeda.priceUsd
-                        
-                        let novaMoeda = Moeda(nomeMoeda, siglaID, imagemMoeda, cotacaoMoeda)
-                        
-                        self.listaDeMoedas.append(novaMoeda)
-
+                        DispatchQueue.main.async {
+                            self.moedas
+                        }
                     }
-
-                    print(moedas)
-
                 } catch let error {
-
                     print("error: \(error)")
-
                 }
-
             }
-
             task.resume()
         }
+    
+
+   
     
 }
 

@@ -55,13 +55,13 @@ public class DetalhesMoeda: UIView {
             }
         }
 
-    func configuraTela(_ moeda: MoedaElements) {
+    func configuraTela(_ moeda: MoedaElement) {
         viewSup.backgroundColor = HeaderCores.headerColor
         siglaMoedaLabel.text = moeda.assetID
         valorMoedaLabel.text = "$ \(moeda.priceUsd)"
         valorHoraLabel.text = "$ \(moeda.volume1HrsUsd)"
-        valorMesLabel.text = "$ \(moeda.volume1HrsUsd)"
-        valorAnoLabel.text = "$ \(moeda.volume1HrsUsd)" // fazer configuração dos valores
+        valorMesLabel.text = "$ \(moeda.volume1DayUsd)"
+        valorAnoLabel.text = "$ \(moeda.volume1MthUsd)" // fazer configuração dos valores
         let caminhoIcon = moeda.idIcon
         let id = caminhoIcon.replacingOccurrences(of: "-", with: "")
         let url = ApiRest.UrlIcon.replacingOccurrences(of: "@@@", with: id)

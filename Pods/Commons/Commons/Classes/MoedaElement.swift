@@ -7,16 +7,18 @@
 
 import Foundation
 
-public struct MoedaElement: Codable {
-    let assetID, name: String
-    let typeIsCrypto: Int
-    let dataStart, dataEnd, dataQuoteStart, dataQuoteEnd: String
-    let dataOrderbookStart, dataOrderbookEnd, dataTradeStart, dataTradeEnd: String
-    let dataSymbolsCount: Int
-    let volume1HrsUsd, volume1DayUsd, volume1MthUsd, priceUsd: Double
-    let idIcon: String
+   // MARK: MoedaElement - Será chamada tela de detalhes e na tela de favoritos
 
-    enum CodingKeys: String, CodingKey {
+public struct MoedaElement: Codable {
+    public let assetID, name: String
+    public let typeIsCrypto: Int
+    public let dataStart, dataEnd, dataQuoteStart, dataQuoteEnd: String
+    public let dataOrderbookStart, dataOrderbookEnd, dataTradeStart, dataTradeEnd: String
+    public let dataSymbolsCount: Int
+    public let volume1HrsUsd, volume1DayUsd, volume1MthUsd, priceUsd: Double
+    public let idIcon: String
+
+public enum CodingKeys: String, CodingKey {
         case assetID = "asset_id"
         case name
         case typeIsCrypto = "type_is_crypto"
@@ -37,4 +39,4 @@ public struct MoedaElement: Codable {
     }
 }
 
-typealias Moeda = [MoedaElement]
+public typealias Moeda = [MoedaElement]

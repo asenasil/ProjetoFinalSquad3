@@ -14,7 +14,7 @@ class DetalhesViewController: UIViewController {
     
     var favoritos: Favoritos?
     
-    @IBOutlet var telaDetalhes: UIView!
+    @IBOutlet var telaDetalhes: UIStackView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +22,6 @@ class DetalhesViewController: UIViewController {
         
         detalhes.verificarFavoritos(favoritos?.lista ?? "", Substring("BTC"))
         detalhes.makeRequestDetalhes(sigla: "BTC")
-
+       
     }
 }

@@ -100,14 +100,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Segunda Tela" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVF-yo-TwN">
-                                <rect key="frame" x="121" y="358" width="168" height="20"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="053-9x-T6Q">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Segunda Tela" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVF-yo-TwN">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KAH-Za-UVp"/>
@@ -115,12 +117,8 @@
                         <constraints>
                             <constraint firstItem="053-9x-T6Q" firstAttribute="leading" secondItem="KAH-Za-UVp" secondAttribute="leading" id="0pk-QS-tA5"/>
                             <constraint firstItem="053-9x-T6Q" firstAttribute="trailing" secondItem="KAH-Za-UVp" secondAttribute="trailing" id="5I7-dQ-xc7"/>
-                            <constraint firstItem="KAH-Za-UVp" firstAttribute="trailing" secondItem="mVF-yo-TwN" secondAttribute="trailing" constant="125" id="7Tx-V6-thb"/>
                             <constraint firstAttribute="bottom" secondItem="053-9x-T6Q" secondAttribute="bottom" id="NVT-JW-3t9"/>
-                            <constraint firstItem="mVF-yo-TwN" firstAttribute="leading" secondItem="KAH-Za-UVp" secondAttribute="leading" constant="121" id="PMy-DV-0lB"/>
                             <constraint firstItem="053-9x-T6Q" firstAttribute="top" secondItem="KAH-Za-UVp" secondAttribute="top" id="Wi1-sW-3Go"/>
-                            <constraint firstItem="mVF-yo-TwN" firstAttribute="centerY" secondItem="DZo-Oa-WW7" secondAttribute="centerY" id="dee-5P-49Y"/>
-                            <constraint firstItem="mVF-yo-TwN" firstAttribute="top" secondItem="KAH-Za-UVp" secondAttribute="top" constant="358" id="n1Y-Vk-57h"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favoritos" id="gar-yK-FMu">
@@ -128,7 +126,7 @@
                         <imageReference key="selectedImage" image="book" catalog="system" renderingMode="original"/>
                     </tabBarItem>
                     <connections>
-                        <outlet property="telaDetalhes" destination="DZo-Oa-WW7" id="4p5-qR-9zz"/>
+                        <outlet property="telaDetalhes" destination="053-9x-T6Q" id="5q8-jb-sR1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2kz-tV-eTj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
