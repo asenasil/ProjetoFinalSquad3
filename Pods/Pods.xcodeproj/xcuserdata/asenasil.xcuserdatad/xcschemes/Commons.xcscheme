@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "E2222F2714A797506D43D6065A62D9FB"
-               BlueprintName = "ModCommons"
+               BlueprintIdentifier = "F7122C79FA629CD43D6C6C92B5777D6C"
+               BlueprintName = "Commons"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "ModCommons.framework">
+               BuildableName = "Commons.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double ModCommonsVersionNumber;
-FOUNDATION_EXPORT const unsigned char ModCommonsVersionString[];
+FOUNDATION_EXPORT double CommonsVersionNumber;
+FOUNDATION_EXPORT const unsigned char CommonsVersionString[];
 

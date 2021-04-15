@@ -2,15 +2,15 @@ PODS:
   - Alamofire (5.4.2)
   - AlamofireImage (4.2.0):
     - Alamofire (~> 5.4)
+  - Commons (0.1.0)
   - DetalhesMoedas (0.1.0)
-  - ModCommons (0.1.0)
   - SwiftLint (0.43.1)
 
 DEPENDENCIES:
   - Alamofire
   - AlamofireImage
+  - Commons (from `https://github.com/leojportes/Commons.git`, branch `develop`)
   - DetalhesMoedas (from `https://github.com/CristianeUliana/DetalhesMoedas.git`)
-  - ModCommons (from `https://github.com/leojportes/CriptoBeca.git`)
   - SwiftLint
 
 SPEC REPOS:
@@ -20,26 +20,27 @@ SPEC REPOS:
     - SwiftLint
 
 EXTERNAL SOURCES:
+  Commons:
+    :branch: develop
+    :git: https://github.com/leojportes/Commons.git
   DetalhesMoedas:
     :git: https://github.com/CristianeUliana/DetalhesMoedas.git
-  ModCommons:
-    :git: https://github.com/leojportes/CriptoBeca.git
 
 CHECKOUT OPTIONS:
+  Commons:
+    :commit: 5d960cc72c507d01ce8f22e4263ecf913f30b1e0
+    :git: https://github.com/leojportes/Commons.git
   DetalhesMoedas:
-    :commit: cc96f971267d586d38027986a2333a0887c82014
+    :commit: 166c4df378f94f7f66e6aa2e856560fc7e374909
     :git: https://github.com/CristianeUliana/DetalhesMoedas.git
-  ModCommons:
-    :commit: d5b8da6c84a2a4f6191b775718cee65238192c25
-    :git: https://github.com/leojportes/CriptoBeca.git
 
 SPEC CHECKSUMS:
   Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
   AlamofireImage: 34a2d90b0e5fe6a5605f85ae4b7b01e784c60192
+  Commons: 5909d5dc693d7ebf877141e4650929951faa0d02
   DetalhesMoedas: 145cd938ff6918c8345eb18f63b8b38438b370bb
-  ModCommons: afbb2c0923d5ef309e169b0a2a35ab9d42d00193
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
 
-PODFILE CHECKSUM: 4a8ad9d260a0697b8eb25bcae7a553ddf378d962
+PODFILE CHECKSUM: a48070ce809c818808851b2694041341d1a9cb73
 
 COCOAPODS: 1.5.2

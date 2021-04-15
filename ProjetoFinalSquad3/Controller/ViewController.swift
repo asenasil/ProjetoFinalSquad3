@@ -8,18 +8,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var stack: UIStackView!
+    
     var criptomoedas = ListaCriptomoedasViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupUI()
         criptomoedas.makeRequest()
         // Do any additional setup after loading the view.
         
         
     }
 
-    
+    func setupUI(){
+        let listaCriptomoedas = ListaCriptomoedasViewController()
+        stack.addArrangedSubview(listaCriptomoedas)
+    }
     
 }
 

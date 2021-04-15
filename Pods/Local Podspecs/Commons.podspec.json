@@ -1,9 +1,9 @@
 {
-  "name": "ModCommons",
+  "name": "Commons",
   "version": "0.1.0",
-  "summary": "A short description of ModCommons.",
+  "summary": "A short description of Commons.",
   "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/leojportes/ModCommons",
+  "homepage": "https://github.com/leojportes/Commons",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -12,11 +12,11 @@
     "leojportes": "leojportes@gmail.com"
   },
   "source": {
-    "git": "https://github.com/leojportes/ModCommons.git",
+    "git": "https://github.com/leojportes/Commons.git",
     "tag": "0.1.0"
   },
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "ModCommons/Classes/**/*"
+  "source_files": "Commons/Classes/**/*"
 }

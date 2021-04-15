@@ -47,9 +47,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-## DetalhesMoedas
+## Commons
 
-Copyright (c) 2021 cristianeguliana@gmail.com <cristianeguliana@gmail.com>
+Copyright (c) 2021 leojportes <leojportes@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -70,9 +70,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
 
-## ModCommons
+## DetalhesMoedas
 
-Copyright (c) 2021 leojportes <leojportes@gmail.com>
+Copyright (c) 2021 cristianeguliana@gmail.com <cristianeguliana@gmail.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

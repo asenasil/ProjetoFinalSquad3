@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A82B539E7D03EB38103D85AFC7BE6C58"
+               BlueprintIdentifier = "E570D49BC48095A2E5E9F4FDF4BB1DFC"
                BlueprintName = "DetalhesMoedas"
                ReferencedContainer = "container:Pods.xcodeproj"
                BuildableName = "DetalhesMoedas.framework">

@@ -11,7 +11,7 @@ target 'ProjetoFinalSquad3' do
   pod 'AlamofireImage' #'~> 3.4.0'
   
  pod 'DetalhesMoedas', :git => 'https://github.com/CristianeUliana/DetalhesMoedas.git'
- pod 'ModCommons', :git => 'https://github.com/leojportes/CriptoBeca.git'
+ pod 'Commons', :git=> 'https://github.com/leojportes/Commons.git', :branch=> 'develop'
   
   # Pods for ProjetoFinalSquad3
 
