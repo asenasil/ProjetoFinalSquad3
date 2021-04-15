@@ -7,8 +7,8 @@ target 'ProjetoFinalSquad3' do
   
   pod 'SwiftLint'
   
-  pod 'Alamofire' #'~> 4.7.0'
-  pod 'AlamofireImage' #'~> 3.4.0'
+  pod 'Alamofire', '~> 5.4.1'
+     pod 'AlamofireImage', '~> 4.1.0'
   
  pod 'DetalhesMoedas', :git => 'https://github.com/CristianeUliana/DetalhesMoedas.git'
  pod 'Commons', :git=> 'https://github.com/leojportes/Commons.git', :branch=> 'develop'
