@@ -35,7 +35,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <searchBar contentMode="redraw" barStyle="black" searchBarStyle="minimal" placeholder="Search" id="oA2-HQ-neg">
-                                                <rect key="frame" x="0.0" y="65.666666666666671" width="414" height="56"/>
+                                                <rect key="frame" x="0.0" y="65" width="414" height="56"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -81,6 +81,7 @@
                     <tabBarItem key="tabBarItem" title="Menu" id="abC-fo-RsQ"/>
                     <connections>
                         <outlet property="dataMoeda" destination="hAu-Ku-pCQ" id="QDj-k0-q8t"/>
+                        <outlet property="listaMoedas" destination="suw-Em-2ib" id="lnz-pd-lFP"/>
                         <outlet property="pesquisaMoeda" destination="oA2-HQ-neg" id="ZdA-ee-dvY"/>
                         <outlet property="tituloMoeda" destination="X2K-LP-HnU" id="5kU-nJ-w67"/>
                     </connections>
@@ -97,9 +98,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Segunda Tela" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVF-yo-TwN">
-                                <rect key="frame" x="121" y="358" width="168" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Segunda Tela" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mVF-yo-TwN">
+                                <rect key="frame" x="121" y="358" width="168" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -107,6 +107,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KAH-Za-UVp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KAH-Za-UVp" firstAttribute="trailing" secondItem="mVF-yo-TwN" secondAttribute="trailing" constant="125" id="7Tx-V6-thb"/>
+                            <constraint firstItem="mVF-yo-TwN" firstAttribute="leading" secondItem="KAH-Za-UVp" secondAttribute="leading" constant="121" id="PMy-DV-0lB"/>
+                            <constraint firstItem="mVF-yo-TwN" firstAttribute="centerY" secondItem="DZo-Oa-WW7" secondAttribute="centerY" id="dee-5P-49Y"/>
+                            <constraint firstItem="mVF-yo-TwN" firstAttribute="top" secondItem="KAH-Za-UVp" secondAttribute="top" constant="358" id="n1Y-Vk-57h"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Favoritos" id="gar-yK-FMu"/>
                 </viewController>
