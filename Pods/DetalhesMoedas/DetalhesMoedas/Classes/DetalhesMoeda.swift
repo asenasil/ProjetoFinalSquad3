@@ -1,83 +1,24 @@
 
 import UIKit
-//import AlamofireImage
-
-
-//struct MoedaElement: Codable {
-//    let assetID, name: String
-//    let typeIsCrypto: Int
-//    let dataStart, dataEnd, dataQuoteStart, dataQuoteEnd: String
-//    let dataOrderbookStart, dataOrderbookEnd, dataTradeStart, dataTradeEnd: String
-//    let dataSymbolsCount: Int
-//    let volume1HrsUsd, volume1DayUsd, volume1MthUsd, priceUsd: Double
-//    let idIcon: String
-//
-//    enum CodingKeys: String, CodingKey {
-//        case assetID = "asset_id"
-//        case name
-//        case typeIsCrypto = "type_is_crypto"
-//        case dataStart = "data_start"
-//        case dataEnd = "data_end"
-//        case dataQuoteStart = "data_quote_start"
-//        case dataQuoteEnd = "data_quote_end"
-//        case dataOrderbookStart = "data_orderbook_start"
-//        case dataOrderbookEnd = "data_orderbook_end"
-//        case dataTradeStart = "data_trade_start"
-//        case dataTradeEnd = "data_trade_end"
-//        case dataSymbolsCount = "data_symbols_count"
-//        case volume1HrsUsd = "volume_1hrs_usd"
-//        case volume1DayUsd = "volume_1day_usd"
-//        case volume1MthUsd = "volume_1mth_usd"
-//        case priceUsd = "price_usd"
-//        case idIcon = "id_icon"
-//    }
-//}
-//
-//typealias Moeda = [MoedaElement]
-
-struct MoedaElement: Codable {
-    let id, assetID, name: String
-    let priceUsd: Int
-    let idIcon: String
-    let volume1HrsUsd, volume1DayUsd, volume1MthUsd: Int
-
-    enum CodingKeys: String, CodingKey {
-        case id
-        case assetID = "asset_id"
-        case name
-        case priceUsd = "price_usd"
-        case idIcon = "id_icon"
-        case volume1HrsUsd = "volume_1hrs_usd"
-        case volume1DayUsd = "volume_1day_usd"
-        case volume1MthUsd = "volume_1mth_usd"
-    }
-}
-
-typealias Moeda = [MoedaElement]
-
-
-public struct Botao {
-    public static let Adicionar = "ADICIONAR"
-    public static let Remover = "REMOVER"
-}
+import AlamofireImage
+import Commons
 
 public class DetalhesMoeda: UIView {
     
-    //var listaFavoritos: [String] = []
-    //var delegate: DetalhesMoedaDelegate?
-    //var buttonAction: (() -> Void)?
-    
-   
-    var favoritos = "USD|BTC|EUR"
+    // MARK: - Variáveis
+
     var ehFavorito = false
+    var delegate: DetalhesMoedaDelegate?
+    @objc var buttonAction: (() -> Void)?
     
     // MARK: - IBOutlets
     
+    @IBOutlet weak var viewButton: UIView!
+    @IBOutlet weak var viewSup: UIView!
     @IBOutlet weak var siglaMoedaLabel: UILabel!
     @IBOutlet weak var favoritoImage: UIImageView!
     @IBOutlet weak var moedaImage: UIImageView!
     @IBOutlet weak var valorMoedaLabel: UILabel!
-    @IBOutlet weak var botaoLabel: UILabel!
     @IBOutlet weak var valorHoraLabel: UILabel!
     @IBOutlet weak var valorMesLabel: UILabel!
     @IBOutlet weak var valorAnoLabel: UILabel!
@@ -85,10 +26,7 @@ public class DetalhesMoeda: UIView {
     // MARK: - Métodos
     
     public func makeRequestDetalhes(sigla: String) {
-            //let newUrl = ApiRest.MoedaDetalhe.replacingOccurrences(of: "@@@", with: sigla)
-            //let api = "https://rest-sandbox.coinapi.io/v1/assets/@@@?apikey=1F8A5E86-F1C9-41C7-B8BB-9DB1B81FDE7C"
-            //let newUrl = api.replacingOccurrences(of: "@@@", with: sigla)
-            let newUrl = "https://607797ae1ed0ae0017d6afb7.mockapi.io/api/v1/users"
+            let newUrl = ApiRest.MoedaDetalhe.replacingOccurrences(of: "@@@", with: sigla)
             let url = URL(string: newUrl)!
             let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
                 print(response as Any)
@@ -107,67 +45,57 @@ public class DetalhesMoeda: UIView {
             task.resume()
         }
 
+    public func verificarFavoritos(_ favoritos: String, _ sigla: Substring) {
+            let listaDeFavoritos = favoritos.split(separator: "|")
+            if listaDeFavoritos.contains(sigla) {
+                ehFavorito = true
+                configurarButton(ActionButton.Remover)
+            } else {
+                configurarButton(ActionButton.Adicionar)
+            }
+        }
 
-    func configuraTela(_ moeda: MoedaElement) {
+    func configuraTela(_ moeda: MoedaElements) {
+        viewSup.backgroundColor = HeaderCores.headerColor
         siglaMoedaLabel.text = moeda.assetID
         valorMoedaLabel.text = "$ \(moeda.priceUsd)"
         valorHoraLabel.text = "$ \(moeda.volume1HrsUsd)"
         valorMesLabel.text = "$ \(moeda.volume1HrsUsd)"
-        valorAnoLabel.text = "$ \(moeda.volume1HrsUsd)"
-        
-
+        valorAnoLabel.text = "$ \(moeda.volume1HrsUsd)" // fazer configuração dos valores
+        let caminhoIcon = moeda.idIcon
+        let id = caminhoIcon.replacingOccurrences(of: "-", with: "")
+        let url = ApiRest.UrlIcon.replacingOccurrences(of: "@@@", with: id)
+        guard let urlCompleta = URL(string: url) else {return}
+        moedaImage.af.setImage(withURL: urlCompleta)
     }
     
+    func configurarButton(_ acao: String) {
+        let button = ButtonDetalhes.centralButton
+        button.setTitle(acao, for: .normal)
+        button.addTarget(self, action: #selector(botaoAcao), for: .touchUpInside)
+        viewButton.addSubview(button)
+        button.translatesAutoresizingMaskIntoConstraints = false
+        let horizontalConstraint = NSLayoutConstraint(item: button, attribute: NSLayoutConstraint.Attribute.centerX, relatedBy: NSLayoutConstraint.Relation.equal, toItem: viewButton, attribute: NSLayoutConstraint.Attribute.centerX, multiplier: 1, constant: 0)
+        let verticalConstraint = NSLayoutConstraint(item: button, attribute: NSLayoutConstraint.Attribute.centerY, relatedBy: NSLayoutConstraint.Relation.equal, toItem: viewButton, attribute: NSLayoutConstraint.Attribute.centerY, multiplier: 1, constant: 0)
+        let widthConstraint = NSLayoutConstraint(item: button, attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 240)
+        let heightConstraint = NSLayoutConstraint(item: button, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 60)
+        viewButton.addConstraints([horizontalConstraint, verticalConstraint, widthConstraint, heightConstraint])
+    }
+
+    public func setupUI(moedaDelegate: DetalhesMoedaDelegate?) {
+        delegate = moedaDelegate
+    }
     
-    
-public func verificarFavoritos(_ sigla: Substring) {
-        let listaDeFavoritos = favoritos.split(separator: "|")
-    
-        if listaDeFavoritos.contains(sigla) {
-            ehFavorito = true
-            botaoLabel.text = Botao.Remover
+    @objc public func botaoAcao() {
+        if let _buttonAction = buttonAction {
+                _buttonAction()
         } else {
-            botaoLabel.text = Botao.Adicionar
+            delegate?.buttonAction()
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-//
-//    public func setupUI(moedaDelegate: DetalhesMoedaDelegate?) {
-//        botaoAdcionarRemoverOutlet.setTitle(Botao.Adicionar, for: .normal)
-//        delegate = moedaDelegate
-//    }
-//
-//
-//
-//
-//
-//    @IBAction func botaoAcao(_ sender: UIButton) {
-//        if let _buttonAction = buttonAction {
-//            _buttonAction()
-//        } else {
-//            delegate?.buttonAction()
-//        }
-//        // se moeda está em listaFavoritos -> Remove
-//        // senão -> Adiciona
-//
-//    }
 }
 
-
+    // MARK: - Extensions
 
 extension UIView {
 
@@ -193,5 +121,3 @@ extension UIView {
         return T()
     }
 }
-
-

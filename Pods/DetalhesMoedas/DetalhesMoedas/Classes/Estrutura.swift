@@ -1,26 +1,25 @@
 //
-//  Criptomoeda.swift
-//  Alamofire
+//  Estrutura.swift
+//  DetalhesMoedas
 //
-//  Created by Leonardo Oliveira Portes on 15/04/21.
+//  Created by Cristiane Goncalves Uliana on 15/04/21.
 //
 
 import Foundation
 
-
-public struct CriptoMoeda: Codable {
-    public let idIcon: String
-    public let assetID: String
-    public let name: String
-    public let dataStart, dataEnd, dataQuoteStart, dataQuoteEnd: Int
-    public let dataOrderbookStart, dataOrderbookEnd, dataTradeStart, dataTradeEnd: Int
-    public let dataSymbolsCount, volume1HrsUsd, volume1DayUsd, volume1MthUsd: Int
-    public let priceUsd: Int
+public struct MoedaElements: Codable {
+    let assetID, name: String
+    let typeIsCrypto: Int
+    let dataStart, dataEnd, dataQuoteStart, dataQuoteEnd: String
+    let dataOrderbookStart, dataOrderbookEnd, dataTradeStart, dataTradeEnd: String
+    let dataSymbolsCount: Int
+    let volume1HrsUsd, volume1DayUsd, volume1MthUsd, priceUsd: Double
+    let idIcon: String
 
     enum CodingKeys: String, CodingKey {
-        case idIcon = "id_icon"
         case assetID = "asset_id"
         case name
+        case typeIsCrypto = "type_is_crypto"
         case dataStart = "data_start"
         case dataEnd = "data_end"
         case dataQuoteStart = "data_quote_start"
@@ -34,8 +33,8 @@ public struct CriptoMoeda: Codable {
         case volume1DayUsd = "volume_1day_usd"
         case volume1MthUsd = "volume_1mth_usd"
         case priceUsd = "price_usd"
+        case idIcon = "id_icon"
     }
 }
-typealias CriptoMoedas = [CriptoMoeda]
 
-
+typealias Moeda = [MoedaElements]

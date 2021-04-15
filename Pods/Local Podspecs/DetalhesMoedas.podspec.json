@@ -18,5 +18,16 @@
   "platforms": {
     "ios": "9.0"
   },
-  "source_files": "DetalhesMoedas/Classes/**/*"
+  "source_files": "DetalhesMoedas/Classes/**/*",
+  "dependencies": {
+    "Alamofire": [
+      "~> 5.4.1"
+    ],
+    "AlamofireImage": [
+      "~> 4.1.0"
+    ],
+    "Commons": [
+
+    ]
+  }
 }

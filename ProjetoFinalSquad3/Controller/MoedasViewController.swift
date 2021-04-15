@@ -41,16 +41,12 @@ typealias CriptoMoedas = [CriptoMoeda]
 
 
 
-class MoedasViewController: UIViewController {
-
+class MoedasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
      // MARK: - Outlets
-    @IBOutlet weak var listaMoedas: UIStackView!
     
-    @IBOutlet weak var tituloMoeda: UILabel!
+    @IBOutlet weak var listaMoedas: UITableView!
     
-    @IBOutlet weak var dataMoeda: UILabel!
-    
-    @IBOutlet weak var pesquisaMoeda: UISearchBar!
     
    
     // MARK: - Selecao de Atributos da Classe
@@ -70,9 +66,34 @@ class MoedasViewController: UIViewController {
     // MARK: - NovoCiclo
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.listaMoedas.register(UINib(nibName: "CustumTableViewCell", bundle: nil), forCellReuseIdentifier: "CustumTableViewCell")
+        
+        self.listaMoedas.delegate = self
+        self.listaMoedas.dataSource = self
+        
         makeRequest()
         
     }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell:CustumTableViewCell? = tableView.dequeueReusableCell(withIdentifier: "CustumTableViewCell", for: indexPath) as? CustumTableViewCell
+        
+        cell?.bitcoinLabel.text
+        cell?.imagemCriptomoeda.image = UIImage(named: "")
+        cell?.imagemDeFavoritos.image = UIImage(named: "")
+        cell?.siglaLabel.text
+        cell?.cotacaoLabel.text
+        
+        return cell ?? UITableViewCell()
+    }
+    
+    
+    
 
     public func makeRequest() {
 

@@ -3,7 +3,10 @@ PODS:
   - AlamofireImage (4.1.0):
     - Alamofire (~> 5.1)
   - Commons (0.1.0)
-  - DetalhesMoedas (0.1.0)
+  - DetalhesMoedas (0.1.0):
+    - Alamofire (~> 5.4.1)
+    - AlamofireImage (~> 4.1.0)
+    - Commons
   - SwiftLint (0.43.1)
 
 DEPENDENCIES:
@@ -28,17 +31,17 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Commons:
-    :commit: 5d960cc72c507d01ce8f22e4263ecf913f30b1e0
+    :commit: 99e61f282193fef2f1bc04334fe4493c2d7f1a55
     :git: https://github.com/leojportes/Commons.git
   DetalhesMoedas:
-    :commit: 166c4df378f94f7f66e6aa2e856560fc7e374909
+    :commit: dffa48fdea61628c0d501c451e0a84e6d0bff808
     :git: https://github.com/CristianeUliana/DetalhesMoedas.git
 
 SPEC CHECKSUMS:
   Alamofire: bfbc4c2fe5909b1d94fb4ef2277c6b3727ef5dae
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
-  Commons: 5909d5dc693d7ebf877141e4650929951faa0d02
-  DetalhesMoedas: 145cd938ff6918c8345eb18f63b8b38438b370bb
+  Commons: d2d9b0d6ebb0ad6fb0a7fa3601815badbb488bab
+  DetalhesMoedas: c1bcce48952413b0a50a7f42116d103a5aa09019
   SwiftLint: 99f82d07b837b942dd563c668de129a03fc3fb52
 
 PODFILE CHECKSUM: 23a4bd8501c97260905d6180d8cf745813c54630
