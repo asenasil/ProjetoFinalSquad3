@@ -45,11 +45,12 @@ public class DetalhesMoeda: UIView {
             task.resume()
         }
 
-    public func verificarFavoritos(_ favoritos: String, _ sigla: Substring) {
+    public func verificarFavoritos(_ favoritos: String, _ sigla: Substring,_ estrela: String) {
             let listaDeFavoritos = favoritos.split(separator: "|")
             if listaDeFavoritos.contains(sigla) {
                 ehFavorito = true
                 configurarButton(ActionButton.Remover)
+                favoritoImage.image = UIImage(named: estrela)
             } else {
                 configurarButton(ActionButton.Adicionar)
             }
@@ -58,10 +59,10 @@ public class DetalhesMoeda: UIView {
     func configuraTela(_ moeda: MoedaElement) {
         viewSup.backgroundColor = HeaderCores.headerColor
         siglaMoedaLabel.text = moeda.assetID
-        valorMoedaLabel.text = "$ \(moeda.priceUsd)"
-        valorHoraLabel.text = "$ \(moeda.volume1HrsUsd)"
-        valorMesLabel.text = "$ \(moeda.volume1DayUsd)"
-        valorAnoLabel.text = "$ \(moeda.volume1MthUsd)" // fazer configuração dos valores
+        valorMoedaLabel.text = moeda.priceUsd.formatador()
+        valorHoraLabel.text = moeda.volume1HrsUsd.formatador()
+        valorMesLabel.text = moeda.volume1DayUsd.formatador()
+        valorAnoLabel.text = moeda.volume1MthUsd.formatador()
         let caminhoIcon = moeda.idIcon
         let id = caminhoIcon.replacingOccurrences(of: "-", with: "")
         let url = ApiRest.UrlIcon.replacingOccurrences(of: "@@@", with: id)
@@ -72,6 +73,7 @@ public class DetalhesMoeda: UIView {
     func configurarButton(_ acao: String) {
         let button = ButtonDetalhes.centralButton
         button.setTitle(acao, for: .normal)
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .bold)
         button.addTarget(self, action: #selector(botaoAcao), for: .touchUpInside)
         viewButton.addSubview(button)
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -119,5 +121,20 @@ extension UIView {
             return nib
         }
         return T()
+    }
+}
+
+extension Double {
+    
+    func formatador() -> String {
+        let numberFormatter = NumberFormatter()
+        numberFormatter.numberStyle = .decimal
+        numberFormatter.maximumFractionDigits = 2
+        numberFormatter.minimumFractionDigits = 2
+        numberFormatter.decimalSeparator = ","
+        numberFormatter.groupingSeparator = "."
+        let numero = NSNumber(value: self)
+        let numeroFormatado = numberFormatter.string(from: numero) ?? ""
+        return "$ \(numeroFormatado)"
     }
 }

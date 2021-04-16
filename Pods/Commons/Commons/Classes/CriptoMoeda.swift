@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 public struct CriptoMoeda: Codable {
     public let idIcon: String
     public let assetID: String

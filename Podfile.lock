@@ -31,10 +31,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   Commons:
-    :commit: 6fed03640b5995196a93240bfb16e395770d04c7
+    :commit: 6c9c8e120ef79465f7952dcf2c2d4faaafbbf590
     :git: https://github.com/leojportes/Commons.git
   DetalhesMoedas:
-    :commit: 5d53dcf1a136f9a8a7a5b5d23ea3dda1e9d5c014
+    :commit: b21f0ea735ade94dc0c89a540d8de64e2efab185
     :git: https://github.com/CristianeUliana/DetalhesMoedas.git
 
 SPEC CHECKSUMS:

@@ -7,18 +7,17 @@
 
 import Foundation
 
-
 import Foundation
 import UIKit
 
-    // MARK: Header
+    // MARK: Header Cores
 
 public struct HeaderCores {
         public static let headerColor = UIColor(red: 0.55, green:0.59, blue:0.37, alpha: 1)
     
 }
 
-    // MARK: Font
+    // MARK: Fonte Header Título e Subtitulo
 
 public struct Font {
        public static let header = UIFont(name: "AvenirLTStd-Black", size: 20.0)!
@@ -27,7 +26,8 @@ public struct Font {
 
 //    // MARK: Button -> Será usado no Módulo de Detalhes.
 //public struct Button {
-//    public static var centralButton: UIButton = {
+//
+//public static var centralButton: UIButton = {
 //    let button = UIButton(frame: CGRect(x: 100, y: 100, width: 180, height: 40))
 //    button.backgroundColor = UIColor(red: 0.55, green:0.59, blue:0.37, alpha: 1)
 //    button.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .bold)
@@ -37,5 +37,4 @@ public struct Font {
 //
 //    return button
 //    }()
-//
 //}
