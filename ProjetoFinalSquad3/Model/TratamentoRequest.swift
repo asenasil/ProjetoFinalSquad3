@@ -1,58 +1,58 @@
+////
+////  TratamentoRequest.swift
+////  ProjetoFinalSquad3
+////
+////  Created by Adalberto Sena Silva on 16/04/21.
+////
 //
-//  TratamentoRequest.swift
-//  ProjetoFinalSquad3
+//import Foundation
 //
-//  Created by Adalberto Sena Silva on 16/04/21.
+//import UIKit
+//import Alamofire
+//import Commons
 //
-
-import Foundation
-
-import UIKit
-import Alamofire
-import Commons
-
-protocol TratamentoRequestMoeda{
-    func getDataServidor(complete: @escaping (_ success: Bool, _ moeda: [Moeda]?) -> Void)
-}
-class TratamentoRequest: TratamentoRequestMoeda{
-    func getDataServidor(complete: @escaping (Bool, [Moeda]?) -> Void) {
-        AF.request(ApiRest.TodasAsMoedas).validate().responseDecodable(of: [Moeda].self){ apiResponde in
-            switch apiResponde.result {
-            case .success(let evento):
-                complete(true, evento)
-            case .failure(let error):
-                print(error)
-                if let httpResposta = apiResponde.response?.statusCode{
-                    switch httpResposta {
-                    case 400:
-                        self.alertaDoWindow(message: "Erro 400: Bad Request", "Falha na requisição dos dados, sintaxe invalida!")
-                    case 401:
-                        self.alertaDoWindow(message: "Erro 401: Unauthorized", "Falha na requisição dos dados, autenticação inválida!")
-                    case 403:
-                        self.alertaDoWindow(message: "Erro 403: Forbidden", "Falha na requisição dos dados, sem permissão para acesso!")
-                    case 429:
-                        self.alertaDoWindow(message: "Erro 429: Too Many Requests", "Falha na requisição dos dados, quantidade de requisição excedida!")
-                    case 550:
-                        let avisoErro: () = self.alertaDoWindow(message: "Erro 550: No Data")
-                        break
-                    default:
-                        break
-                    }
-                }
-            }
-        }
-    }
-        func alertaDoWindow(message: String){
-                let alerta = UIAlertController(title: "Atenção", message: message, preferredStyle: .alert)
-                let botaoOk = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                alerta.addAction(botaoOk)
-                alerta.present(alerta, animated: true, completion: nil)
-            }
-    }
-
-        
-    
-    
-
+//protocol TratamentoRequestMoeda{
+//    func getDataServidor(complete: @escaping (_ success: Bool, _ moeda: [Moeda]?) -> Void)
+//}
+//class TratamentoRequest: TratamentoRequestMoeda{
+//    func getDataServidor(complete: @escaping (Bool, [Moeda]?) -> Void) {
+//        AF.request(ApiRest.TodasAsMoedas).validate().responseDecodable(of: [Moeda].self){ apiResponde in
+//            switch apiResponde.result {
+//            case .success(let evento):
+//                complete(true, evento)
+//            case .failure(let error):
+//                print(error)
+//                if let httpResposta = apiResponde.response?.statusCode{
+//                    switch httpResposta {
+//                    case 400:
+//                        self.alertaDoWindow(message: "Erro 400: Bad Request", "Falha na requisição dos dados, sintaxe invalida!")
+//                    case 401:
+//                        self.alertaDoWindow(message: "Erro 401: Unauthorized", "Falha na requisição dos dados, autenticação inválida!")
+//                    case 403:
+//                        self.alertaDoWindow(message: "Erro 403: Forbidden", "Falha na requisição dos dados, sem permissão para acesso!")
+//                    case 429:
+//                        self.alertaDoWindow(message: "Erro 429: Too Many Requests", "Falha na requisição dos dados, quantidade de requisição excedida!")
+//                    case 550:
+//                        let avisoErro: () = self.alertaDoWindow(message: "Erro 550: No Data")
+//                        break
+//                    default:
+//                        break
+//                    }
+//                }
+//            }
+//        }
+//    }
+//        func alertaDoWindow(message: String){
+//                let alerta = UIAlertController(title: "Atenção", message: message, preferredStyle: .alert)
+//                let botaoOk = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+//                alerta.addAction(botaoOk)
+//                alerta.present(alerta, animated: true, completion: nil)
+//            }
+//    }
+//
+//        
+//    
+//    
+//
 
     

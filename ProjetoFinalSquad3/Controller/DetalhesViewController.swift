@@ -20,8 +20,6 @@ class DetalhesViewController: UIViewController {
         super.viewDidLoad()
         telaDetalhes.addSubview(detalhes)
         
-        detalhes.verificarFavoritos(favoritos?.lista ?? "", Substring("BTC"))
-        detalhes.makeRequestDetalhes(sigla: "BTC")
-       
+        
     }
 }

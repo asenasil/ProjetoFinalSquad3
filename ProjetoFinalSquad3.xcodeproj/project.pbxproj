@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		016E90CA43743D374C189153 /* Pods_ProjetoFinalSquad3Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 778BF33D15DC09A408C263B3 /* Pods_ProjetoFinalSquad3Tests.framework */; };
 		4B6C325315B141F0A25A9E4D /* Pods_ProjetoFinalSquad3.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 805D75D09922B15C6EBC6249 /* Pods_ProjetoFinalSquad3.framework */; };
-		AA08198E262719CC00B444B4 /* MoedasViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA08198D262719CC00B444B4 /* MoedasViewModel.swift */; };
+		AA08198E262719CC00B444B4 /* MoedaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA08198D262719CC00B444B4 /* MoedaViewModel.swift */; };
 		AA0819A22627748500B444B4 /* Moeda.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA0819A12627748500B444B4 /* Moeda.swift */; };
 		AA6AA5BC2625DF0E00697A7D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AA5BB2625DF0E00697A7D /* AppDelegate.swift */; };
 		AA6AA5BE2625DF0E00697A7D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA6AA5BD2625DF0E00697A7D /* SceneDelegate.swift */; };
@@ -51,7 +51,7 @@
 		778BF33D15DC09A408C263B3 /* Pods_ProjetoFinalSquad3Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjetoFinalSquad3Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C44B346F9E116FE31BA1274 /* Pods_ProjetoFinalSquad3UITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjetoFinalSquad3UITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		805D75D09922B15C6EBC6249 /* Pods_ProjetoFinalSquad3.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProjetoFinalSquad3.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AA08198D262719CC00B444B4 /* MoedasViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedasViewModel.swift; sourceTree = "<group>"; };
+		AA08198D262719CC00B444B4 /* MoedaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedaViewModel.swift; sourceTree = "<group>"; };
 		AA0819A12627748500B444B4 /* Moeda.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Moeda.swift; sourceTree = "<group>"; };
 		AA6AA5B82625DF0E00697A7D /* ProjetoFinalSquad3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ProjetoFinalSquad3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA6AA5BB2625DF0E00697A7D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -203,7 +203,7 @@
 		AA6AA60F2625E96600697A7D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				AA08198D262719CC00B444B4 /* MoedasViewModel.swift */,
+				AA08198D262719CC00B444B4 /* MoedaViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -452,7 +452,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AA9AF3542628C1CF00EDBE63 /* DetalhesViewController.swift in Sources */,
-				AA08198E262719CC00B444B4 /* MoedasViewModel.swift in Sources */,
+				AA08198E262719CC00B444B4 /* MoedaViewModel.swift in Sources */,
 				AA6AA5C62625DF0E00697A7D /* ProjetoFinalSquad3.xcdatamodeld in Sources */,
 				AA0819A22627748500B444B4 /* Moeda.swift in Sources */,
 				AA7FC2EA26261459003B7539 /* CustumTableViewCell.swift in Sources */,

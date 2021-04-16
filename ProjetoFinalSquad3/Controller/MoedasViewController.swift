@@ -20,7 +20,7 @@ class MoedasViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     // MARK: - Selecao de Atributos da Classe
 
-    var listaDeMoedas:[Moeda] = []
+    var listaDeMoedas:[Criptomoeda] = []
 
     var favoritos: Favoritos?
     
@@ -33,12 +33,19 @@ class MoedasViewController: UIViewController, UITableViewDelegate, UITableViewDa
         
         self.listaMoedas.delegate = self
         self.listaMoedas.dataSource = self
-        makeRequestDetalhes()
+        
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(true)
-    }
+    override func viewWillAppear(_ animated: Bool) {
+        makeRequest{ (resultados) in
+        DispatchQueue.main.async {
+        self.listaMoedas.reloadData()
+            
+                }
+
+            }
+
+        }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.listaDeMoedas.count
@@ -57,8 +64,7 @@ class MoedasViewController: UIViewController, UITableViewDelegate, UITableViewDa
         return cell ?? UITableViewCell()
     }
 
-     func makeRequestDetalhes() {
-//            let newUrl = ApiRest.MoedaDetalhe.replacingOccurrences(of: "@@@", with: sigla)
+    func makeRequest(completion:@escaping([Criptomoeda]) -> Void) {
         let url = URL(string: ApiRest.TodasAsMoedas)!
             let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
                 print(response as Any)
@@ -66,21 +72,29 @@ class MoedasViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 do {
                     let moedas = try JSONDecoder().decode(Moedas.self, from: responseData)
                     
-                    for moeda in moedas {
-                            print(moeda)
-                    }
+                    for i in 0...5 {
+
+                    var moedaFiltrada = moedas.filter {$0.typeIsCrypto == 1 && $0.priceUsd ?? 0>0 && (($0.idIcon?.isEmpty) != nil)}
+
+                     guard let sigla = moedaFiltrada[i].assetID else {return}
+
+                     guard let nome = moedaFiltrada[i].name else {return}
+
+                     guard let valor = moedaFiltrada[i].priceUsd else {return}
+
+                     guard let idIcon = moedaFiltrada[i].idIcon else {return}
+
+                        let criptomoeda = Criptomoeda(sigla: sigla, nome: nome, valor: valor, imagem: idIcon)
+
+                    self.listaDeMoedas.append(criptomoeda)
+
+                     }
+                    completion(self.listaDeMoedas)
+                    
                 } catch let error {
                     print("error: \(error)")
                 }
             }
-            task.resume()
-        }
-    
-    func configuraTela(_ moeda: Moeda){
-
-//        let preco = moeda.priceUsd ?? 0
-
+        task.resume()
     }
-
 }
-

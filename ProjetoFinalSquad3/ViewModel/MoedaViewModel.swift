@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MoedasViewModel{
+struct Criptomoeda{
     
     let sigla: String
     let nome: String
