@@ -23,7 +23,6 @@
 		AA7FC2EB26261459003B7539 /* CustumTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AA7FC2E926261459003B7539 /* CustumTableViewCell.xib */; };
 		AA9AF3272628786B00EDBE63 /* MoedasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9AF3262628786B00EDBE63 /* MoedasViewController.swift */; };
 		AA9AF3542628C1CF00EDBE63 /* DetalhesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9AF3532628C1CF00EDBE63 /* DetalhesViewController.swift */; };
-		AA9AF3992629D47200EDBE63 /* Tratamento.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9AF3982629D47200EDBE63 /* Tratamento.swift */; };
 		E5B3BAAF6415AB17B1A9DCC2 /* Pods_ProjetoFinalSquad3UITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C44B346F9E116FE31BA1274 /* Pods_ProjetoFinalSquad3UITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +70,6 @@
 		AA7FC2E926261459003B7539 /* CustumTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustumTableViewCell.xib; sourceTree = "<group>"; };
 		AA9AF3262628786B00EDBE63 /* MoedasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoedasViewController.swift; sourceTree = "<group>"; };
 		AA9AF3532628C1CF00EDBE63 /* DetalhesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetalhesViewController.swift; sourceTree = "<group>"; };
-		AA9AF3982629D47200EDBE63 /* Tratamento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tratamento.swift; sourceTree = "<group>"; };
 		C38CF03EFA6AA244BFD60E92 /* Pods-ProjetoFinalSquad3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoFinalSquad3.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetoFinalSquad3/Pods-ProjetoFinalSquad3.release.xcconfig"; sourceTree = "<group>"; };
 		D42430430992FF4A4C29053E /* Pods-ProjetoFinalSquad3UITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoFinalSquad3UITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetoFinalSquad3UITests/Pods-ProjetoFinalSquad3UITests.release.xcconfig"; sourceTree = "<group>"; };
 		D64C4F0113FCC8B53A7DC36D /* Pods-ProjetoFinalSquad3Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjetoFinalSquad3Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ProjetoFinalSquad3Tests/Pods-ProjetoFinalSquad3Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -203,7 +201,6 @@
 				AA08198D262719CC00B444B4 /* DetalhesMoedasViewModel.swift */,
 				AA6AA5BD2625DF0E00697A7D /* SceneDelegate.swift */,
 				AA6AA5BB2625DF0E00697A7D /* AppDelegate.swift */,
-				AA9AF3982629D47200EDBE63 /* Tratamento.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -453,7 +450,6 @@
 			files = (
 				AA9AF3542628C1CF00EDBE63 /* DetalhesViewController.swift in Sources */,
 				AA08198E262719CC00B444B4 /* DetalhesMoedasViewModel.swift in Sources */,
-				AA9AF3992629D47200EDBE63 /* Tratamento.swift in Sources */,
 				AA6AA5C62625DF0E00697A7D /* ProjetoFinalSquad3.xcdatamodeld in Sources */,
 				AA0819A22627748500B444B4 /* Moeda.swift in Sources */,
 				AA7FC2EA26261459003B7539 /* CustumTableViewCell.swift in Sources */,

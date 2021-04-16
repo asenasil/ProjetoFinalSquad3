@@ -10,47 +10,14 @@ import Commons
 import AlamofireImage
 import DetalhesMoedas
 
-
-public struct Cripto: Codable {
-//    public let idIcon: String
-    public let assetID: String
-//    public let name: String
-//    public let dataStart, dataEnd, dataQuoteStart, dataQuoteEnd: Int
-//    public let dataOrderbookStart, dataOrderbookEnd, dataTradeStart, dataTradeEnd: Int
-//    public let dataSymbolsCount, volume1HrsUsd, volume1DayUsd, volume1MthUsd: Int
-    public let priceUsd: Int?
-
-public enum CodingKeys: String, CodingKey {
-//        case idIcon = "id_icon"
-        case assetID = "asset_id"
-//        case name
-//        case dataStart = "data_start"
-//        case dataEnd = "data_end"
-//        case dataQuoteStart = "data_quote_start"
-////        case dataQuoteEnd = "data_quote_end"
-//        case dataOrderbookStart = "data_orderbook_start"
-//        case dataOrderbookEnd = "data_orderbook_end"
-//        case dataTradeStart = "data_trade_start"
-//        case dataTradeEnd = "data_trade_end"
-//        case dataSymbolsCount = "data_symbols_count"
-//        case volume1HrsUsd = "volume_1hrs_usd"
-//        case volume1DayUsd = "volume_1day_usd"
-//        case volume1MthUsd = "volume_1mth_usd"
-        case priceUsd = "price_usd"
-    }
-}
-public typealias Criptos = [Cripto]
-
-
-
 class MoedasViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
      // MARK: - Outlets
     
+    
+    
     @IBOutlet weak var listaMoedas: UITableView!
     
-    
-   
     // MARK: - Selecao de Atributos da Classe
 
     var listaDeMoedas:[Moeda] = []
@@ -59,9 +26,6 @@ class MoedasViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
 //    var moedas: CriptoMoedas = []
 
-  
-    
-    
     // MARK: - NovoCiclo
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -100,13 +64,10 @@ class MoedasViewController: UIViewController, UITableViewDelegate, UITableViewDa
                 print(response as Any)
                 guard let responseData = data else { return }
                 do {
-                    let moedas = try JSONDecoder().decode(Criptos.self, from: responseData)
+                    let moedas = try JSONDecoder().decode(Moedas.self, from: responseData)
                     
-                    for moeda in moedas{
-                        DispatchQueue.main.async {
-                            self.configuraTela(moeda)
+                    for moeda in moedas {
                             print(moeda)
-                        }
                     }
                 } catch let error {
                     print("error: \(error)")
@@ -115,11 +76,10 @@ class MoedasViewController: UIViewController, UITableViewDelegate, UITableViewDa
             task.resume()
         }
     
-    func configuraTela(_ moeda: Cripto){
+    func configuraTela(_ moeda: Moeda){
 
-        let preco = moeda.priceUsd ?? 0
+//        let preco = moeda.priceUsd ?? 0
 
-        
     }
 
 }
