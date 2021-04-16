@@ -53,15 +53,16 @@ class MoedasViewController: UIViewController, UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell:CustumTableViewCell? = tableView.dequeueReusableCell(withIdentifier: "CustumTableViewCell", for: indexPath) as? CustumTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CustumTableViewCell", for: indexPath) as! CustumTableViewCell
 
-//        cell?.bitcoinLabel.text
-//        cell?.imagemCriptomoeda.image = UIImage(named: "")
-//        cell?.imagemDeFavoritos.image = UIImage(named: "")
-//        cell?.siglaLabel.text
-//        cell?.cotacaoLabel.text
+                
+
+                let moedaAtual = listaDeMoedas[indexPath.row]
+
+                cell.configuraCelula(moedaAtual)
         
-        return cell ?? UITableViewCell()
+        return cell
+
     }
 
     func makeRequest(completion:@escaping([Criptomoeda]) -> Void) {

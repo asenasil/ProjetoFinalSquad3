@@ -4,7 +4,7 @@
 //
 //  Created by Adalberto Sena Silva on 13/04/21.
 //
-
+import Commons
 import UIKit
 
 class CustumTableViewCell: UITableViewCell {
@@ -32,4 +32,16 @@ class CustumTableViewCell: UITableViewCell {
 
     }
     
+    func configuraCelula(_ moeda: Criptomoeda) {
+        bitcoinLabel.text = moeda.nome
+        siglaLabel.text = moeda.sigla
+        cotacaoLabel.text = String(moeda.valor)
+
+        let caminhoIcon = moeda.imagem
+        let id = caminhoIcon.replacingOccurrences(of: "-", with: "")
+        let url = ApiRest.UrlIcon.replacingOccurrences(of: "@@@", with: id)
+        guard let urlCompleta = URL(string: url) else {return}
+        imagemCriptomoeda.af.setImage(withURL: urlCompleta)
+
+    }
 }
