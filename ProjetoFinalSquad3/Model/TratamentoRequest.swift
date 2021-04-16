@@ -27,31 +27,31 @@ class TratamentoRequest: TratamentoRequestMoeda{
                     case 400:
                         self.alertaDoWindow(message: "Erro 400: Bad Request", "Falha na requisição dos dados, sintaxe invalida!")
                     case 401:
-                        self.alertaDoWindows(message: "Erro 401: Unauthorized", "Falha na requisição dos dados, autenticação inválida!")
+                        self.alertaDoWindow(message: "Erro 401: Unauthorized", "Falha na requisição dos dados, autenticação inválida!")
                     case 403:
-                        self.alertaDoWindows(message: "Erro 403: Forbidden", "Falha na requisição dos dados, sem permissão para acesso!")
+                        self.alertaDoWindow(message: "Erro 403: Forbidden", "Falha na requisição dos dados, sem permissão para acesso!")
                     case 429:
-                        self.alertaDoWindows(message: "Erro 429: Too Many Requests", "Falha na requisição dos dados, quantidade de requisição excedida!")
+                        self.alertaDoWindow(message: "Erro 429: Too Many Requests", "Falha na requisição dos dados, quantidade de requisição excedida!")
                     case 550:
-                        self.alertaDoWindows(message: "Erro 550: No Data", "Falha na requisição dos dados, o dado nao existe!")
+                        let avisoErro: () = self.alertaDoWindow(message: "Erro 550: No Data")
                         break
                     default:
                         break
                     }
-                    }
                 }
+            }
         }
     }
-}
-    extension TratamentoRequest {
+        func alertaDoWindow(message: String){
+                let alerta = UIAlertController(title: "Atenção", message: message, preferredStyle: .alert)
+                let botaoOk = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+                alerta.addAction(botaoOk)
+                alerta.present(alerta, animated: true, completion: nil)
+            }
+    }
+
         
-    func alertaDoWindow(message: String){
-            let alerta = UIAlertController(title: "Atenção", message: message, preferredStyle: .alert)
-            let botaoOk = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alerta.addAction(botaoOk)
-            self.present(alerta, animated: true, completion: nil)
-        }
-    }
+    
     
 
 
