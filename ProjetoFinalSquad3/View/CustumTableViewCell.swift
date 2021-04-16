@@ -20,6 +20,9 @@ class CustumTableViewCell: UITableViewCell {
     
     @IBOutlet weak var cotacaoLabel: UILabel!
     
+    var moedasFavoritas: Favoritos?
+    var moedasFavoritasTeste = "BTC|USD|ETH|FRE"
+
     
     
     override func awakeFromNib() {
@@ -42,6 +45,16 @@ class CustumTableViewCell: UITableViewCell {
         let url = ApiRest.UrlIcon.replacingOccurrences(of: "@@@", with: id)
         guard let urlCompleta = URL(string: url) else {return}
         imagemCriptomoeda.af.setImage(withURL: urlCompleta)
+        
+        //guard let favoritos = moedasFavoritas?.lista else {return}
+         //let listaDeFavoritos = favoritos.split(separator: "|")
+         let listaDeFavoritos = moedasFavoritasTeste.split(separator: "|")
+         if listaDeFavoritos.contains(Substring(moeda.sigla)) {
 
+               print(listaDeFavoritos)
+               print(moeda.sigla)
+               imagemDeFavoritos.image = UIImage(named: "estrela")
+        
     }
+ }
 }
